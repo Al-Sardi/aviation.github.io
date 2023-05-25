@@ -12,7 +12,6 @@
         - Dark Mode Support
         - Sign Up / Log In
         
-        - 
         - Flugzeug Marken -- icons8
         - Turbinen -- icons8
         - Allianzen --icons8
@@ -20,6 +19,11 @@
         - Zero-E
         - Neuigkeiten (Articles)
         - APIs for Data
+        - Footer
+
+
+        - 2nd - book a flight (Lufthansa)
+        - 3rd - Reiseziele (Emirates)
     -->
     <body>
         <header>
@@ -41,14 +45,65 @@
                                 <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                                 <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                               </svg>
-                            </button>
+                        </button>
                     </div>
                 </section>
                 <section id="second-section">
-                    <p>2nd</p>
-                </section>
-                <section>
-                    <p>3rd</p>
+                    <div class="section-content">
+                        <div class="title-wrap">
+                            <h1>Book a Flight<span style="color: #eacf00;">.</span></h1>
+                        </div>
+                        <div class="booking-wrap">
+                            <div class="booking-card">
+                                <nav id="booking-nav">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="src/flight-booking/plane.png" alt="Flug">
+                                                Flights
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="src/flight-booking/hotel.png" alt="Hotel">
+                                                Hotels
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="src/flight-booking/car.png" alt="Mietwagen">
+                                                Car rentals
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div id="booking-sections">
+                                    <div class="flights">
+                                        <div class="settings">
+                                            <select id="select-flight-type">
+                                                <option value="1">One Way Flight</option>
+                                                <option value="2">incl. Return Flight</option>
+                                            </select>
+                                            <button id="details">
+                                                ${textContent}
+                                            </button>
+                                        </div>
+                                        <div class="destination">
+                                            <form>
+                                                <input placeholder="From" type="text">
+                                                <span id="changer"></span>
+                                                <input placeholder="To" type="text">
+                                                <input type="date">
+                                                <input type="submit">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="hotels"></div>
+                                    <div class="cars"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
         </main>

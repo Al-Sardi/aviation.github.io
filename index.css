@@ -17,6 +17,8 @@ html{
 body{
     --aa-blue: #1976d2;
     --aa-red: #d50000;
+    --lh-blue: #000050;
+    --lh-yellow: #eacf00;
     --grau: #111416;
     --grau-a: #212529;
     --grau-b: #343a40;
@@ -29,7 +31,7 @@ body{
     --grau-i: #f8f9fa;
     height: 100%;
     background-color: var(--grau-i);
-    color: var(--grau);
+    color: #ffffff;
     font-family: "Comfortaa", sans-serif;
     display: block;
     font-size: medium;
@@ -73,6 +75,10 @@ section{
     width: 100vw;
 }
 
+.section-content{
+    padding: 15vh 8vw 15vh 8vw;
+}
+
 section:first-child{
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("src/air-sky-hero.jpg");
     object-fit: cover;
@@ -111,15 +117,133 @@ section:first-child{
     color: var(--aa-blue);
     align-self: center;
     border-radius: 5px;
-    width: 5vh;
-    height: 5vh;
+    width: 5vw;
+    height: 5vw;
     object-fit: cover;
 }
 
-section:nth-child(2){
-    background-color: var(--aa-blue);
+#second-section{
+    background-color: var(--lh-blue);
 }
 
-section:nth-child(3){
-    background-color: var(--aa-red);
+#second-section .section-content{
+    display: block;
+}
+
+#second-section .section-content .title-wrap{
+    display: flex;
+}
+
+#second-section .section-content .title-wrap h1{
+    font-size: 10vw;
+    font-weight: 200;
+}
+
+#second-section .section-content .booking-wrap{
+    padding-top: 5vh;
+}
+
+#second-section .section-content .booking-wrap .booking-card{
+    background-color: #ffffff;
+    color: #000000;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#booking-nav{
+    display: block;
+    border-bottom: solid 1px var(--lh-blue);
+}
+
+#booking-nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#booking-nav ul li{
+    padding-left: 3vw;
+    display: flex;
+    align-items: center;
+}
+
+#booking-nav ul li a{
+    font-size: 3vw;
+    color: var(--lh-blue);
+    padding: 2vh 2vw 2vh 2vw;
+}
+
+#booking-nav ul li:first-child a{
+    border-bottom: solid 5px var(--lh-yellow);
+}
+
+#booking-nav ul li a:hover{
+    background-color: var(--lh-blue);
+    color: var(--lh-yellow);
+}
+
+#booking-nav ul li a img{
+    width: 3vw;
+    height: 3vw;
+}
+
+#booking-sections{
+    background-color: #ffffff;
+}
+
+#booking-sections .flights{
+    padding: 2vh 2vw 2vh 2vw;
+}
+
+#booking-sections .flights .settings{
+    padding: 2vh 0 2vh 0;
+}
+
+#booking-sections .flights .settings select{
+    padding: 2vh 0 2vh 1vw;
+    color: #ffffff;
+    background-color: #000050;
+    border-radius: 5px;
+}
+
+#details{
+    margin-left: 6vw;
+    padding: 2vh 1vw 2vh 1vw;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: var(--lh-blue);
+}
+
+#booking-sections .flights .destination{
+    padding: 2vh 0 2vh 0;
+}
+
+#booking-sections .flights .destination form input:first-child{
+    border-bottom: solid 2px var(--lh-blue);
+    padding: 1vh 1vw 1vh 1vw;
+}
+
+#booking-sections .flights .destination form input:first-child:focus{
+    border: solid 2px var(--lh-blue);
+}
+
+#booking-sections .flights .destination form input:nth-child(3){
+    border-bottom: solid 2px var(--lh-blue);
+    padding: 1vh 1vw 1vh 1vw;
+}
+
+#booking-sections .flights .destination form input:nth-child(3):focus{
+    border: solid 2px var(--lh-blue);
+}
+
+#booking-sections .flights .destination form input:nth-child(5){
+    background-color: #eacf00;
+    border-radius: 5px;
+    padding: 1vh 1vw 1vh 1vw;
+}
+
+footer{
+    height: 50vh;
+    width: 100vw;
+    background-color: var(--aa-blue);
 }
