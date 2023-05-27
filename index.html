@@ -54,52 +54,53 @@
                             <h1>Book a Flight<span style="color: #eacf00;">.</span></h1>
                         </div>
                         <div class="booking-wrap">
-                            <div class="booking-card">
+                            <div class="booking-card" id="bookingCard">
                                 <nav id="booking-nav">
                                     <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="src/flight-booking/plane.png" alt="Flug">
-                                                Flights
-                                            </a>
+                                        <li id="flights-li">
+                                            <img src="src/flight-booking/plane.png" alt="Flug">
+                                            Flights
                                         </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="src/flight-booking/hotel.png" alt="Hotel">
-                                                Hotels
-                                            </a>
+                                        <li id="hotels-li">
+                                            <img src="src/flight-booking/hotel.png" alt="Hotel">
+                                            Hotels
                                         </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="src/flight-booking/car.png" alt="Mietwagen">
-                                                Car rentals
-                                            </a>
+                                        <li id="cars-li">
+                                            <img src="src/flight-booking/car.png" alt="Mietwagen">
+                                            Car&nbsp;rentals
                                         </li>
                                     </ul>
                                 </nav>
                                 <div id="booking-sections">
-                                    <div class="flights">
+                                    <div id="flights">
                                         <div class="settings">
                                             <select id="select-flight-type">
-                                                <option value="1">One Way Flight</option>
+                                                <option value="1" selected>One Way Flight</option>
                                                 <option value="2">incl. Return Flight</option>
                                             </select>
                                             <button id="details">
                                                 ${textContent}
+                                                <!-- https://www.stichpunkt.de/html/popup.html -->
                                             </button>
                                         </div>
                                         <div class="destination">
                                             <form>
-                                                <input placeholder="From" type="text">
-                                                <span id="changer"></span>
-                                                <input placeholder="To" type="text">
-                                                <input type="date">
-                                                <input type="submit">
+                                                <div class="one">
+                                                    <input placeholder="From" type="text" id="first-input">
+                                                    <span id="changer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-expand" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"/>
+                                                        </svg>
+                                                    </span>
+                                                    <input placeholder="To" type="text" id="second-input">
+                                                </div>
+                                                <input type="date" id="date">
+                                                <input type="submit" id="book" name="Book" value="Book">
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="hotels"></div>
-                                    <div class="cars"></div>
+                                    <div id="hotels"></div>
+                                    <div id="cars"></div>
                                 </div>
                             </div>
                         </div>
@@ -109,5 +110,5 @@
         </main>
         <footer></footer>
     </body>
-    <script src="index.js"></script>
+    <script src="index.js" type="text/javascript"></script>
 </html>
