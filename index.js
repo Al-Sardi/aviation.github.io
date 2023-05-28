@@ -1,6 +1,7 @@
 const BODY = document.body;
-const scrollDownBtn = document.querySelector('#scroll-down-btn');
+const scrollDownBtn = document.querySelector('#book-now-btn');
 const secondSection = document.querySelector('#second-section');
+const progressBar = document.getElementById('progress-bar');
 const bookBtn = document.querySelector('#book');
 const flightsLi = document.getElementById('flights-li');
 const hotelsLi = document.getElementById('hotels-li');
@@ -36,3 +37,10 @@ function showCars(){
     flights.style.display = "none";
     hotels.style.display = "none";
 }
+
+window.addEventListener("scroll", () => {
+    let heightPR = document.body.scrollHeight - window.innerHeight;
+    let scrollPositionPR = document.documentElement.scrollTop;
+    let widthPR = (scrollPositionPR / heightPR)*100;
+    progressBar.style.width = `${widthPR}%`;
+});

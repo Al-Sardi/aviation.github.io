@@ -18,12 +18,11 @@
         - Flugzeug Bauer --icons8
         - Zero-E
         - Neuigkeiten (Articles)
+        - Vielfliegerprogramme
         - APIs for Data
         - Footer
 
-
-        - 2nd - book a flight (Lufthansa)
-        - 3rd - Reiseziele (Emirates)
+        - nextSection - Reiseziele (Emirates)
     -->
     <body>
         <header>
@@ -32,6 +31,7 @@
                 <h1>Aviation</h1>
                 <nav></nav>
             </div>
+            <div id="progress-bar"></div>
         </header>
         <main>
             <div class="main-content">
@@ -39,8 +39,8 @@
                     <div class="hero-txt">
                         <h1>Aviation</h1>
                         <br>
-                        <button id="scroll-down-btn">
-                            Scroll down for more
+                        <button id="book-now-btn">
+                            Book a Flight now!
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                                 <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -78,10 +78,13 @@
                                                 <option value="1" selected>One Way Flight</option>
                                                 <option value="2">incl. Return Flight</option>
                                             </select>
-                                            <button id="details">
+                                            <button id="detailsBtn">
                                                 ${textContent}
                                                 <!-- https://www.stichpunkt.de/html/popup.html -->
                                             </button>
+                                            <div id="detailsDiv">
+                                                
+                                            </div>
                                         </div>
                                         <div class="destination">
                                             <form>
@@ -96,7 +99,7 @@
                                                 </div>
                                                 <div class="two">
                                                     <input type="date" id="date">
-                                                    <input type="submit" id="book" name="Book" value="Book">
+                                                    <button id="book">Book</button>
                                                 </div>
                                         
                                             </form>
