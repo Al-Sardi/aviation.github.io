@@ -23,10 +23,16 @@ function bookFlight(){
 }
 function showFlights(){
     flights.style.display = "block";
+    hotels.style.display = "none";
+    cars.style.display = "none";
 }
 function showHotels(){
     hotels.style.display = "block";
+    flights.style.display = "none";
+    cars.style.display = "none";
 }
 function showCars(){
     cars.style.display = "block";
+    flights.style.display = "none";
+    hotels.style.display = "none";
 }
