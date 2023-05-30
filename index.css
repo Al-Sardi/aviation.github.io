@@ -43,7 +43,9 @@ header{
     position: fixed;
     width: 100vw;
     height: 10vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #ffffff;
     z-index: 2;
 }
@@ -85,7 +87,7 @@ section{
 }
 
 .section-content{
-    padding: 15vh 5vw 15vh 5vw;
+    padding: 15vh 5vw 5vh 5vw;
 }
 
 section:first-child{
@@ -206,7 +208,7 @@ section:first-child{
 }
 
 #flights .settings{
-    padding: 2vh 0 2vh 0;
+    padding: 1em 0 1em 0;
 }
 
 #flights .settings select{
@@ -215,6 +217,7 @@ section:first-child{
     background-color: #000050;
     border-radius: 5px;
 }
+
 
 #detailsBtn{
     margin-left: 6vw;
@@ -226,8 +229,101 @@ section:first-child{
 
 #detailsDiv{
     display: none;
-    padding: 1em 0 1em 0;
+    padding: 1em;
+    margin: 1em 0 1em 0;
     color: #000000;
+    border: solid 1px var(--lh-yellow);
+    border-radius: 10px;
+}
+
+#detailsDiv .leftnright{
+    display: flex;
+}
+
+#detailsDiv .detailsClass{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+#detailsDiv .left{
+    width: 50%;
+
+}
+
+.h-here{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: var(--lh-blue);
+}
+
+.img-here{
+    padding: 0 1em 0 1em;
+}
+
+#detailsDiv .left .adults{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    padding: 0 1em 0 1em;
+}
+
+#detailsDiv .left .kids{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    padding: 0 1em 0 1em;
+}
+
+#detailsDiv .left .babys{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    padding: 0 1em 0 1em;
+}
+
+#detailsDiv .right{
+    width: 50%;
+}
+
+#detailsDiv .right .numField{
+    margin-bottom: 1em;
+    padding: 0 1em 0 1em;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color: var(--lh-blue);
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+#detailsDiv .right .numField .minusD{
+    border-right: solid 1px var(--lh-yellow);
+    padding-right: .5em;
+}
+
+#detailsDiv .right .numField .numD{
+    padding: 0 .5em 0 .5em;
+}
+
+#detailsDiv .right .numField .plusD{
+    border-left: solid 1px var(--lh-yellow);
+    padding-left: .5em;
+}
+
+#detailsDiv .saveDetailsWrap{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#saveDetails{
+    background-color: #eacf00;
+    border-radius: 5px;
+    padding: 1em;
+    margin-left: 1em;
+    font-weight: 600;
 }
 
 #changer{
@@ -242,8 +338,7 @@ section:first-child{
 }
 
 #flights .destination{
-    padding: 2em;
-    margin-top: 1em;
+    padding: 1em;
 }
 
 #flights .destination form{
@@ -277,6 +372,7 @@ section:first-child{
 
 #first-input:focus, #second-input:focus{
     border: solid 2px var(--lh-blue);
+    border-radius: 5px;
 }
 
 #date{
@@ -322,5 +418,16 @@ footer{
 @media screen and (max-width: 400px) {
     #booking-nav{
         overflow: scroll;
+    }
+    #flights .settings{
+        display: block;
+    }
+    #detailsBtn{
+        margin-left: 0;
+        margin-top: 1em;
+        padding: 2vh 1vw 2vh 1vw;
+        border-radius: 5px;
+        color: #ffffff;
+        background-color: var(--lh-blue);
     }
 }

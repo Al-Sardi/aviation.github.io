@@ -79,11 +79,75 @@
                                                 <option value="2">incl. Return Flight</option>
                                             </select>
                                             <button id="detailsBtn">
-                                                ${textContent}
-                                                <!-- https://www.stichpunkt.de/html/popup.html -->
+                                                Passengers
                                             </button>
                                             <div id="detailsDiv">
-                                                
+                                                <div class="detailsClass">
+                                                    <h3 class="h-here">Select a class</h3>
+                                                    <img class="img-here" src="icons/chevron-right.svg" alt="">
+                                                    <select name="class" id="class">
+                                                        <option value="1">Economy</option>
+                                                        <option value="2">Premium Economy</option>
+                                                        <option value="3">Business Class</option>
+                                                        <option value="4">First Class</option>
+                                                    </select>
+                                                </div>
+                                                <div class="leftnright">
+                                                    <div class="left">
+                                                        <div class="adults">
+                                                            <h3 class="h-here">Adults</h3>
+                                                            <img class="img-here" src="icons/chevron-right.svg" alt="">
+                                                        </div>
+                                                        <div class="kids">
+                                                            <h3 class="h-here">Children</h3>
+                                                            <img class="img-here" src="icons/chevron-right.svg" alt="">
+                                                        </div>
+                                                        <div class="babys">
+                                                            <h3 class="h-here">Babys</h3>
+                                                            <img class="img-here" src="icons/chevron-right.svg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="right">
+                                                        <div class="numField">
+                                                            <span id="decN" class="minusD">
+                                                                <h1>-</h1>
+                                                            </span>
+                                                            <span class="numD">
+                                                                <h3 id="displayN">1</h3>
+                                                            </span>
+                                                            <span id="incN" class="plusD">
+                                                                <h1>+</h1>
+                                                            </span>
+                                                        </div>
+                                                        <div class="numField">
+                                                            <span id="decNN" class="minusD">
+                                                                <h1>-</h1>
+                                                            </span>
+                                                            <span id="numDD" class="numD">
+                                                                <h3 id="displayNN">0</h3>
+                                                            </span>
+                                                            <span id="incNN" class="plusD">
+                                                                <h1>+</h1>
+                                                            </span>
+                                                        </div>
+                                                        <div class="numField">
+                                                            <span id="decNNN" class="minusD">
+                                                                <h1>-</h1>
+                                                            </span>
+                                                            <span id="numDDD" class="numD">
+                                                                <h3 id="displayNNN">0</h3>
+                                                            </span>
+                                                            <span id="incNNN" class="plusD">
+                                                                <h1>+</h1>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="saveDetailsWrap">
+                                                    <button id="saveDetails">
+                                                        Save
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="destination">
