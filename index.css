@@ -47,7 +47,7 @@ header{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: #ffffff;
-    z-index: 2;
+    z-index: 5;
 }
 
 .header-content{
